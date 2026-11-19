@@ -1,0 +1,212 @@
+/* ==========================================================================
+   PRATHVI - DEVELOPER PORTFOLIO
+   Responsive Stylesheet: Tablet, Mobile, and Drawer Navigation
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. TABLET BREAKPOINTS (max-width: 1024px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 1024px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    text-align: left;
+    gap: 2.5rem;
+  }
+
+  .hero-visual {
+    order: -1;
+    justify-content: flex-start;
+  }
+
+  .hero-avatar-wrapper {
+    width: 190px;
+    height: 190px;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   2. MOBILE BREAKPOINT & DRAWER (max-width: 768px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 768px) {
+  :root {
+    --header-height: 4rem;
+  }
+
+  .section {
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
+  }
+
+  .mobile-nav-toggle {
+    display: flex;
+  }
+
+  /* Off-canvas Mobile Drawer */
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: min(80vw, 320px);
+    height: 100vh;
+    background-color: var(--bg-surface);
+    border-left: 1px solid var(--border-medium);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 6rem 2rem 2rem 2rem;
+    gap: 1.5rem;
+    box-shadow: var(--shadow-xl);
+    z-index: 1050;
+    transition: right var(--transition-normal);
+  }
+
+  .nav-links.drawer-open {
+    right: 0;
+  }
+
+  .nav-link {
+    font-size: 1.15rem;
+    width: 100%;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--border-subtle);
+  }
+
+  /* Drawer Backdrop Overlay */
+  .drawer-overlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(15, 23, 42, 0.6);
+    backdrop-filter: blur(4px);
+    z-index: 1040;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity var(--transition-fast);
+  }
+
+  .drawer-overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  /* Close button inside drawer */
+  .drawer-close-btn {
+    position: absolute;
+    top: 1.25rem;
+    right: 1.25rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: var(--radius-sm);
+    background-color: var(--bg-subtle);
+    border: 1px solid var(--border-subtle);
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .hero-cta-group {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero-cta-group .btn {
+    width: 100%;
+  }
+
+  .education-timeline::before {
+    left: 1rem;
+  }
+
+  .education-card {
+    padding-left: 2.5rem;
+  }
+
+  .timeline-marker {
+    left: 0.4rem;
+  }
+
+  .project-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .project-actions .btn {
+    width: 100%;
+  }
+
+  .modal-container {
+    max-height: 95vh;
+  }
+
+  .modal-body {
+    padding: 1.25rem;
+  }
+
+  .resume-paper {
+    padding: 1.25rem;
+  }
+
+  .resume-header {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .resume-contact-list {
+    text-align: left;
+  }
+
+  .toast-container {
+    left: 1rem;
+    right: 1rem;
+    bottom: 1rem;
+  }
+
+  .toast {
+    width: 100%;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   3. SMALL MOBILE PHONES (max-width: 480px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 2.15rem;
+  }
+
+  .hero-role-subhead {
+    font-size: 1.15rem;
+  }
+
+  .hero-bio {
+    font-size: 1.05rem;
+  }
+
+  .contact-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .contact-card .copy-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .hero-quick-meta {
+    grid-template-columns: 1fr;
+  }
+}

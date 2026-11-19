@@ -1,0 +1,21 @@
+{
+  "name": "prathvi-developer-portfolio",
+  "version": "1.0.0",
+  "description": "Personal developer portfolio website for Prathvi, First-Year MCA student at Poornaprajna Institute of Management (PIM), Udupi",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx serve . -l 3000",
+    "dev": "npx serve . -l 3000"
+  },
+  "keywords": [
+    "portfolio",
+    "mca",
+    "developer",
+    "pim-udupi",
+    "poornaprajna-institute-of-management",
+    "orange-and-charcoal",
+    "wcag-compliant"
+  ],
+  "author": "Prathvi",
+  "license": "MIT"
+}
